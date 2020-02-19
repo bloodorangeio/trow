@@ -48,7 +48,7 @@ COPY start-trow.sh /
 RUN mkdir --parents /data/layers && mkdir /data/scratch && mkdir /certs
 RUN chown -R trow /data /certs /install
 USER trow
-ENTRYPOINT ["/start-trow.sh"]
+ENTRYPOINT ["/start-trow.sh", "--no-tls"]
 
 ARG VCS_REF
 ARG DATE
